@@ -1,0 +1,3 @@
+defaults:
+  - sweep_slurm
+  - optuna

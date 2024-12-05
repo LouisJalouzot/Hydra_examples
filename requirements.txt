@@ -1,0 +1,9 @@
+scikit-learn
+hydra-core
+hydra_colorlog
+hydra-joblib-launcher
+hydra-submitit-launcher
+hydra-optuna-sweeper
+optuna-dashboard
+sqlalchemy==1.4.46
+setuptools

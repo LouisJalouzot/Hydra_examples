@@ -1,0 +1,13 @@
+defaults:
+  - override hydra/launcher: submitit_slurm
+
+hydra:
+  launcher:
+    submitit_folder: ${hydra.sweep.dir}/%j
+    timeout_min: 60
+    cpus_per_task: 1
+    # gpus_per_node: 1
+    mem_gb: 1
+    name: ${hydra.job.name}
+    partition: cpu
+    stderr_to_stdout: true
