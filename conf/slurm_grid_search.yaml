@@ -1,0 +1,3 @@
+defaults:
+  - grid_search
+  - sweep_slurm
