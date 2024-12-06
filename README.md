@@ -1,3 +1,9 @@
+# Create a virtual environment and activate it
+```bash
+uv sync
+source .venv/bin/activate
+```
+
 # Default run (nothing saved)
 
 ```bash
@@ -28,8 +34,17 @@ python main.py -cn optuna
 python main.py -cn optuna_slurm
 ```
 
-# Explore optuna search results (open in firefox)
-
+# Explore optuna search results
+Create another environment because of dependencies incompatibilities and install `optuna-dashboard`
 ```bash
+uv venv .dashboard_venv --python=3.11.10
+deactivate # If another environment is activated
+source .dashboard_venv/bin/activate
+uv pip install optuna-dashboard>=0.16.2
+```
+
+Upgrade the database and launch the dashboard
+```bash
+optuna storage upgrade --storage sqlite:///optuna.db
 optuna-dashboard sqlite:///optuna.db
 ```
