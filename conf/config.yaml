@@ -1,8 +1,11 @@
 defaults:
-  - override hydra/job_logging: colorlog
-  - override hydra/hydra_logging: colorlog
+  - override hydra/job_logging: custom
+  - override hydra/hydra_logging: custom
 
 project_name: "main"
 criterion: gini
 n_estimators: 100
 max_depth: null
+
+hydra:
+  output_subdir: ""
