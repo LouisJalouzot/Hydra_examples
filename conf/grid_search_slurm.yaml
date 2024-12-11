@@ -1,0 +1,5 @@
+# Launch the grid search on a SLURM cluster
+
+defaults:
+  - slurm
+  - grid_search

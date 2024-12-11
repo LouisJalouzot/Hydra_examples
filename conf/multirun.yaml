@@ -1,0 +1,12 @@
+# Provides defaults for launching multiple runs
+
+defaults:
+  - _self_
+  - config
+
+hydra:
+  mode: MULTIRUN
+  output_subdir: ${hydra.job.id}
+  sweep:
+    dir: ${hydra.run.dir}
+    subdir: ${hydra.job.id}
