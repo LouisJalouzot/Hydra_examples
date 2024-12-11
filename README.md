@@ -40,7 +40,7 @@ Create another environment because of dependencies incompatibilities and install
 uv venv .dashboard_venv --python=3.11.10
 deactivate # If another environment is activated
 source .dashboard_venv/bin/activate
-uv pip install optuna-dashboard>=0.16.2
+uv pip install "optuna-dashboard>=0.16.2"
 ```
 
 Upgrade the database and launch the dashboard

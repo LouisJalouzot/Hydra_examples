@@ -1,3 +1,5 @@
+# Launch the optuna sweep on a SLURM cluster
+
 defaults:
-  - sweep_slurm
+  - slurm
   - optuna

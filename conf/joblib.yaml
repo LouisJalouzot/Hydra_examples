@@ -1,0 +1,11 @@
+# To launch jobs in parallel using joblib
+defaults:
+  - _self_
+  - config
+  - multirun
+  - override hydra/launcher: joblib
+
+hydra:
+  launcher:
+    n_jobs: 10
+    prefer: processes

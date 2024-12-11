@@ -1,0 +1,5 @@
+# Launch the optuna sweep in parallel using joblib
+
+defaults:
+  - joblib
+  - optuna

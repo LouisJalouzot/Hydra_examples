@@ -1,0 +1,5 @@
+# Launch the grid search in parallel using joblib
+
+defaults:
+  - joblib
+  - grid_search

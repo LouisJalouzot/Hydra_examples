@@ -1,12 +1,11 @@
+# Configuration for a grid search
+
 defaults:
   - _self_
   - config
+  - multirun
 
 hydra:
-  mode: MULTIRUN
-  sweep:
-    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
-    subdir: ${hydra.job.id}
   sweeper:
     params:
       ++criterion: gini,entropy,log_loss
