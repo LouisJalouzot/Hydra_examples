@@ -18,7 +18,7 @@ handlers:
   file:
     class: logging.FileHandler
     formatter: simple
-    filename: outputs/${now:%Y-%m-%d}_${now:%H-%M-%S}_hydra.log
+    filename: outputs/${now:%Y-%m-%d}_${now:%H-%M-%S}_hydra.log # Requires the outputs folder to exist
 root:
   handlers:
   - console

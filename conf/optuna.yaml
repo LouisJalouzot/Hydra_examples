@@ -2,7 +2,6 @@
 
 defaults:
   - _self_
-  - config
   - multirun
   - override hydra/sweeper: optuna
   - override hydra/sweeper/sampler: tpe
