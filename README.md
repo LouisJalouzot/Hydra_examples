@@ -16,21 +16,19 @@ python main.py
 python main.py -cn grid_search
 ```
 
-# Grid search on SLURM cluster (nothing saved)
-
-```bash
-python main.py -cn slurm_grid_search
-```
-
 # Optuna search (results saved in optuna.db)
 
+You can stop and restart the script, optuna will look into the database to continue the search from where it stopped
 ```bash
 python main.py -cn optuna
 ```
 
-# Optuna search on SLURM cluster (results saved in optuna.db)
+# Grid search or optuna search in parallel using joblib or on SLURM cluster
 
 ```bash
+python main.py -cn grid_search_joblib
+python main.py -cn grid_search_slurm
+python main.py -cn optuna_joblib
 python main.py -cn optuna_slurm
 ```
 
@@ -43,8 +41,11 @@ source .dashboard_venv/bin/activate
 uv pip install "optuna-dashboard>=0.16.2"
 ```
 
-Upgrade the database and launch the dashboard
+`optuna-dashboard` requires to update the database but you need to keep the original one for the script to continue using it.
+
+Therefore you can copy and upgrade the database and launch the dashboard with
 ```bash
-optuna storage upgrade --storage sqlite:///optuna.db
-optuna-dashboard sqlite:///optuna.db
+cp optuna.db optuna_up.db
+optuna storage upgrade --storage sqlite:///optuna_up.db
+optuna-dashboard sqlite:///optuna_up.db
 ```
