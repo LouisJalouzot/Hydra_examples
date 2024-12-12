@@ -14,7 +14,7 @@ hydra:
     sampler:
       seed: 0
     direction: maximize
-    n_trials: 100
+    n_trials: 50
     n_jobs: 10
     params:
       criterion: choice(gini,entropy,log_loss)
