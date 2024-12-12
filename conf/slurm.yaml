@@ -1,5 +1,8 @@
 # To launch jobs on a SLURM cluster using submitit
+
 defaults:
+  - _self_
+  - multirun
   - override hydra/launcher: submitit_slurm
 
 hydra:

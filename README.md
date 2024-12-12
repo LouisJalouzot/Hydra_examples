@@ -25,6 +25,7 @@ python main.py -cn optuna
 
 # Grid search or optuna search in parallel using joblib or on SLURM cluster
 
+Beware that you need an existing directory `outputs` for the scripts to launch correctly.
 ```bash
 python main.py -cn grid_search_joblib
 python main.py -cn grid_search_slurm
