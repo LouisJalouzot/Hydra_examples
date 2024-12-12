@@ -8,4 +8,6 @@ n_estimators: 100
 max_depth: null
 
 hydra:
+  run:
+    dir: outputs/${hydra.job.config_name}/${now:%Y-%m-%d}/${now:%H-%M-%S}
   output_subdir: ""
