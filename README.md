@@ -4,6 +4,11 @@ uv sync
 source .venv/bin/activate
 ```
 
+Unfortunately you will need to create a directory `outputs/${config_name}` before launching scripts. Which can be done automatically for the configs in the `conf/` directory with the following command:
+```bash
+/bin/bash create_output_dirs.sh
+```
+
 # Default run (nothing saved)
 
 ```bash
@@ -25,7 +30,6 @@ python main.py -cn optuna
 
 # Grid search or optuna search in parallel using joblib or on SLURM cluster
 
-Beware that you need an existing directory `outputs` for the scripts to launch correctly.
 ```bash
 python main.py -cn grid_search_joblib
 python main.py -cn grid_search_slurm

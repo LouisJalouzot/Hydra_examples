@@ -18,7 +18,7 @@ handlers:
   file:
     class: logging.FileHandler
     formatter: simple
-    filename: outputs/${now:%Y-%m-%d}_${now:%H-%M-%S}_hydra.log # Requires the outputs folder to exist
+    filename: outputs/${hydra.job.config_name}/${now:%Y-%m-%d}_${now:%H-%M-%S}.log # Requires the outputs/${config_name} folder to exist
 root:
   handlers:
   - console
