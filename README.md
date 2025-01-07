@@ -1,3 +1,6 @@
+# Caveat
+For now logging is messed up, error messages are lost.
+
 # Create a virtual environment and activate it
 ```bash
 uv sync
